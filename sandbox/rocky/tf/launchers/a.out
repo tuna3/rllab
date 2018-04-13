@@ -1,0 +1,192 @@
+policy/mean_network/hidden_0/W:0
+policy/mean_network/hidden_0/b:0
+policy/mean_network/hidden_1/W:0
+policy/mean_network/hidden_1/b:0
+policy/mean_network/output/W:0
+policy/mean_network/output/b:0
+policy/output_std_param/param:0
+2018-04-12 17:15:44.117426 PDT | Populating workers...
+2018-04-12 17:15:44.117622 PDT | Populated
+2018-04-12 17:15:44.135480 PDT | itr #0 | Obtaining samples...
+update
+Warning: No valid output stream.
+2018-04-12 17:15:47.393420 PDT | itr #0 | Processing samples...
+2018-04-12 17:15:47.421330 PDT | itr #0 | fitting baseline...
+2018-04-12 17:15:47.441067 PDT | itr #0 | fitted
+2018-04-12 17:15:47.442185 PDT | itr #0 | Logging diagnostics...
+2018-04-12 17:15:47.444206 PDT | itr #0 | Optimizing policy...
+2018-04-12 17:15:47.444459 PDT | itr #0 | Computing loss before
+2018-04-12 17:15:47.451109 PDT | itr #0 | Computing KL before
+2018-04-12 17:15:47.456528 PDT | itr #0 | Optimizing
+2018-04-12 17:15:47.457498 PDT | itr #0 | Start CG optimization: #parameters: 1250, #inputs: 4007, #subsample_inputs: 4007
+2018-04-12 17:15:47.457652 PDT | itr #0 | computing loss before
+2018-04-12 17:15:47.464607 PDT | itr #0 | performing update
+2018-04-12 17:15:47.464804 PDT | itr #0 | computing gradient
+2018-04-12 17:15:47.488943 PDT | itr #0 | gradient computed
+2018-04-12 17:15:47.489159 PDT | itr #0 | computing descent direction
+2018-04-12 17:15:48.142207 PDT | itr #0 | descent direction computed
+2018-04-12 17:15:48.152102 PDT | itr #0 | backtrack iters: 0
+2018-04-12 17:15:48.152255 PDT | itr #0 | computing loss after
+2018-04-12 17:15:48.152356 PDT | itr #0 | optimization finished
+2018-04-12 17:15:48.152450 PDT | itr #0 | Computing KL after
+2018-04-12 17:15:48.154529 PDT | itr #0 | Computing loss after
+2018-04-12 17:15:48.157957 PDT | itr #0 | Saving snapshot...
+2018-04-12 17:15:48.158136 PDT | itr #0 | Saved
+2018-04-12 17:15:48.159309 PDT | -----------------------  -------------
+2018-04-12 17:15:48.159442 PDT | Iteration                  0
+2018-04-12 17:15:48.159536 PDT | AverageDiscountedReturn   50.9601
+2018-04-12 17:15:48.159625 PDT | AverageReturn             52.773
+2018-04-12 17:15:48.159711 PDT | ExplainedVariance          7.93832e-12
+2018-04-12 17:15:48.159797 PDT | NumTrajs                 638
+2018-04-12 17:15:48.159883 PDT | Entropy                    1.41894
+2018-04-12 17:15:48.159969 PDT | Perplexity                 4.13273
+2018-04-12 17:15:48.160054 PDT | StdReturn                 38.5118
+2018-04-12 17:15:48.160139 PDT | MaxReturn                239.833
+2018-04-12 17:15:48.160303 PDT | MinReturn                  0
+2018-04-12 17:15:48.160416 PDT | AveragePolicyStd           1
+2018-04-12 17:15:48.160506 PDT | LossBefore                -2.73702e-08
+2018-04-12 17:15:48.160592 PDT | LossAfter                 -0.0256548
+2018-04-12 17:15:48.160677 PDT | MeanKLBefore               0
+2018-04-12 17:15:48.160762 PDT | MeanKL                     0.00949474
+2018-04-12 17:15:48.160847 PDT | dLoss                      0.0256547
+2018-04-12 17:15:48.160932 PDT | Time                       4.02352
+2018-04-12 17:15:48.161028 PDT | ItrTime                    4.02351
+2018-04-12 17:15:48.161113 PDT | -----------------------  -------------
+came here
+2018-04-12 17:15:48.161624 PDT | itr #1 | Obtaining samples...
+Warning: No valid output stream.
+2018-04-12 17:15:51.439624 PDT | itr #1 | Processing samples...
+2018-04-12 17:15:51.480316 PDT | itr #1 | fitting baseline...
+2018-04-12 17:15:51.503143 PDT | itr #1 | fitted
+2018-04-12 17:15:51.508442 PDT | itr #1 | Logging diagnostics...
+2018-04-12 17:15:51.510632 PDT | itr #1 | Optimizing policy...
+2018-04-12 17:15:51.510862 PDT | itr #1 | Computing loss before
+2018-04-12 17:15:51.512559 PDT | itr #1 | Computing KL before
+2018-04-12 17:15:51.515551 PDT | itr #1 | Optimizing
+2018-04-12 17:15:51.516788 PDT | itr #1 | Start CG optimization: #parameters: 1250, #inputs: 4000, #subsample_inputs: 4000
+2018-04-12 17:15:51.517012 PDT | itr #1 | computing loss before
+2018-04-12 17:15:51.520863 PDT | itr #1 | performing update
+2018-04-12 17:15:51.521210 PDT | itr #1 | computing gradient
+2018-04-12 17:15:51.524702 PDT | itr #1 | gradient computed
+2018-04-12 17:15:51.524903 PDT | itr #1 | computing descent direction
+2018-04-12 17:15:51.686927 PDT | itr #1 | descent direction computed
+2018-04-12 17:15:51.696580 PDT | itr #1 | backtrack iters: 1
+2018-04-12 17:15:51.696729 PDT | itr #1 | computing loss after
+2018-04-12 17:15:51.696824 PDT | itr #1 | optimization finished
+2018-04-12 17:15:51.696918 PDT | itr #1 | Computing KL after
+2018-04-12 17:15:51.698692 PDT | itr #1 | Computing loss after
+2018-04-12 17:15:51.700860 PDT | itr #1 | Saving snapshot...
+2018-04-12 17:15:51.701088 PDT | itr #1 | Saved
+2018-04-12 17:15:51.702114 PDT | -----------------------  -------------
+2018-04-12 17:15:51.702293 PDT | Iteration                  1
+2018-04-12 17:15:51.702453 PDT | AverageDiscountedReturn   56.8142
+2018-04-12 17:15:51.702610 PDT | AverageReturn             59.0479
+2018-04-12 17:15:51.702765 PDT | ExplainedVariance          0.177826
+2018-04-12 17:15:51.702920 PDT | NumTrajs                 579
+2018-04-12 17:15:51.703075 PDT | Entropy                    1.41557
+2018-04-12 17:15:51.703228 PDT | Perplexity                 4.11882
+2018-04-12 17:15:51.703382 PDT | StdReturn                 41.5707
+2018-04-12 17:15:51.703536 PDT | MaxReturn                359.798
+2018-04-12 17:15:51.703690 PDT | MinReturn                  0
+2018-04-12 17:15:51.704537 PDT | AveragePolicyStd           0.996635
+2018-04-12 17:15:51.704739 PDT | LossBefore                -1.97887e-08
+2018-04-12 17:15:51.704883 PDT | LossAfter                 -0.0409027
+2018-04-12 17:15:51.705221 PDT | MeanKLBefore               0
+2018-04-12 17:15:51.705370 PDT | MeanKL                     0.00741665
+2018-04-12 17:15:51.705462 PDT | dLoss                      0.0409027
+2018-04-12 17:15:51.705550 PDT | Time                       7.56654
+2018-04-12 17:15:51.705635 PDT | ItrTime                    3.53964
+2018-04-12 17:15:51.705721 PDT | -----------------------  -------------
+came here
+2018-04-12 17:15:51.706254 PDT | itr #2 | Obtaining samples...
+Warning: No valid output stream.
+2018-04-12 17:15:55.068349 PDT | itr #2 | Processing samples...
+2018-04-12 17:15:55.100659 PDT | itr #2 | fitting baseline...
+2018-04-12 17:15:55.116457 PDT | itr #2 | fitted
+2018-04-12 17:15:55.119029 PDT | itr #2 | Logging diagnostics...
+2018-04-12 17:15:55.120055 PDT | itr #2 | Optimizing policy...
+2018-04-12 17:15:55.120179 PDT | itr #2 | Computing loss before
+2018-04-12 17:15:55.122466 PDT | itr #2 | Computing KL before
+2018-04-12 17:15:55.128582 PDT | itr #2 | Optimizing
+2018-04-12 17:15:55.129356 PDT | itr #2 | Start CG optimization: #parameters: 1250, #inputs: 4000, #subsample_inputs: 4000
+2018-04-12 17:15:55.129542 PDT | itr #2 | computing loss before
+2018-04-12 17:15:55.131376 PDT | itr #2 | performing update
+2018-04-12 17:15:55.131554 PDT | itr #2 | computing gradient
+2018-04-12 17:15:55.136391 PDT | itr #2 | gradient computed
+2018-04-12 17:15:55.136649 PDT | itr #2 | computing descent direction
+2018-04-12 17:15:55.278557 PDT | itr #2 | descent direction computed
+2018-04-12 17:15:55.287257 PDT | itr #2 | backtrack iters: 1
+2018-04-12 17:15:55.287447 PDT | itr #2 | computing loss after
+2018-04-12 17:15:55.287573 PDT | itr #2 | optimization finished
+2018-04-12 17:15:55.287696 PDT | itr #2 | Computing KL after
+2018-04-12 17:15:55.289478 PDT | itr #2 | Computing loss after
+2018-04-12 17:15:55.291094 PDT | itr #2 | Saving snapshot...
+2018-04-12 17:15:55.291239 PDT | itr #2 | Saved
+2018-04-12 17:15:55.291806 PDT | -----------------------  -------------
+2018-04-12 17:15:55.291910 PDT | Iteration                  2
+2018-04-12 17:15:55.291999 PDT | AverageDiscountedReturn   65.0442
+2018-04-12 17:15:55.292085 PDT | AverageReturn             68.2365
+2018-04-12 17:15:55.292170 PDT | ExplainedVariance          0.154215
+2018-04-12 17:15:55.292255 PDT | NumTrajs                 511
+2018-04-12 17:15:55.292340 PDT | Entropy                    1.40491
+2018-04-12 17:15:55.292424 PDT | Perplexity                 4.07518
+2018-04-12 17:15:55.292525 PDT | StdReturn                 51.9159
+2018-04-12 17:15:55.292612 PDT | MaxReturn                339.864
+2018-04-12 17:15:55.292713 PDT | MinReturn                  0
+2018-04-12 17:15:55.292798 PDT | AveragePolicyStd           0.986074
+2018-04-12 17:15:55.292881 PDT | LossBefore                 1.14441e-08
+2018-04-12 17:15:55.292964 PDT | LossAfter                 -0.0398151
+2018-04-12 17:15:55.293048 PDT | MeanKLBefore               0
+2018-04-12 17:15:55.293131 PDT | MeanKL                     0.00777203
+2018-04-12 17:15:55.293215 PDT | dLoss                      0.0398151
+2018-04-12 17:15:55.293299 PDT | Time                      11.1566
+2018-04-12 17:15:55.293382 PDT | ItrTime                    3.5851
+2018-04-12 17:15:55.293465 PDT | -----------------------  -------------
+came here
+2018-04-12 17:15:55.294093 PDT | itr #3 | Obtaining samples...
+Warning: No valid output stream.
+2018-04-12 17:15:58.588741 PDT | itr #3 | Processing samples...
+2018-04-12 17:15:58.612878 PDT | itr #3 | fitting baseline...
+2018-04-12 17:15:58.621441 PDT | itr #3 | fitted
+2018-04-12 17:15:58.624186 PDT | itr #3 | Logging diagnostics...
+2018-04-12 17:15:58.625428 PDT | itr #3 | Optimizing policy...
+2018-04-12 17:15:58.625618 PDT | itr #3 | Computing loss before
+2018-04-12 17:15:58.627415 PDT | itr #3 | Computing KL before
+2018-04-12 17:15:58.628995 PDT | itr #3 | Optimizing
+2018-04-12 17:15:58.629528 PDT | itr #3 | Start CG optimization: #parameters: 1250, #inputs: 4002, #subsample_inputs: 4002
+2018-04-12 17:15:58.629645 PDT | itr #3 | computing loss before
+2018-04-12 17:15:58.631432 PDT | itr #3 | performing update
+2018-04-12 17:15:58.631559 PDT | itr #3 | computing gradient
+2018-04-12 17:15:58.637411 PDT | itr #3 | gradient computed
+2018-04-12 17:15:58.637558 PDT | itr #3 | computing descent direction
+2018-04-12 17:15:58.755253 PDT | itr #3 | descent direction computed
+2018-04-12 17:15:58.759546 PDT | itr #3 | backtrack iters: 1
+2018-04-12 17:15:58.759690 PDT | itr #3 | computing loss after
+2018-04-12 17:15:58.759786 PDT | itr #3 | optimization finished
+2018-04-12 17:15:58.759881 PDT | itr #3 | Computing KL after
+2018-04-12 17:15:58.761176 PDT | itr #3 | Computing loss after
+2018-04-12 17:15:58.762869 PDT | itr #3 | Saving snapshot...
+2018-04-12 17:15:58.763010 PDT | itr #3 | Saved
+2018-04-12 17:15:58.768652 PDT | -----------------------  -------------
+2018-04-12 17:15:58.768819 PDT | Iteration                  3
+2018-04-12 17:15:58.768944 PDT | AverageDiscountedReturn   79.3812
+2018-04-12 17:15:58.769063 PDT | AverageReturn             84.563
+2018-04-12 17:15:58.769181 PDT | ExplainedVariance          0.14468
+2018-04-12 17:15:58.769297 PDT | NumTrajs                 423
+2018-04-12 17:15:58.769413 PDT | Entropy                    1.39531
+2018-04-12 17:15:58.769530 PDT | Perplexity                 4.03621
+2018-04-12 17:15:58.769695 PDT | StdReturn                 68.363
+2018-04-12 17:15:58.769820 PDT | MaxReturn                389.86
+2018-04-12 17:15:58.769948 PDT | MinReturn                  0
+2018-04-12 17:15:58.770070 PDT | AveragePolicyStd           0.976644
+2018-04-12 17:15:58.770243 PDT | LossBefore                -5.39152e-09
+2018-04-12 17:15:58.770401 PDT | LossAfter                 -0.0387798
+2018-04-12 17:15:58.770553 PDT | MeanKLBefore               0
+2018-04-12 17:15:58.770706 PDT | MeanKL                     0.00769974
+2018-04-12 17:15:58.770802 PDT | dLoss                      0.0387797
+2018-04-12 17:15:58.770890 PDT | Time                      14.6284
+2018-04-12 17:15:58.770977 PDT | ItrTime                    3.46909
+2018-04-12 17:15:58.771064 PDT | -----------------------  -------------
+came here
+2018-04-12 17:15:58.771610 PDT | itr #4 | Obtaining samples...
+Warning: No valid output stream.

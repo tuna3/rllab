@@ -6,6 +6,7 @@ import tensorflow as tf
 
 def worker_init_tf(G):
     G.sess = tf.Session()
+    print("entering worker_tf")
     G.sess.__enter__()
 
 

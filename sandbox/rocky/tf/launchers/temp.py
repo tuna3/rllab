@@ -6,8 +6,6 @@ import tensorflow as tf
 from sandbox.rocky.tf.samplers.batch_sampler import BatchSampler
 from sandbox.rocky.tf.samplers.vectorized_sampler import VectorizedSampler
 from rllab.sampler.utils import rollout
-import sandbox.rocky.tf.plotter as plotter
-import pickle
 
 
 class BatchPolopt(RLAlgorithm):
@@ -79,7 +77,10 @@ class BatchPolopt(RLAlgorithm):
         self.whole_paths = whole_paths
         self.fixed_horizon = fixed_horizon
         if sampler_cls is None:
-            sampler_cls = BatchSampler
+            if self.policy.vectorized and not force_batch_sampler:
+                sampler_cls = VectorizedSampler
+            else:
+                sampler_cls = BatchSampler
         if sampler_args is None:
             sampler_args = dict()
         self.sampler = sampler_cls(self, **sampler_args)
@@ -87,9 +88,6 @@ class BatchPolopt(RLAlgorithm):
 
     def start_worker(self):
         self.sampler.start_worker()
-        if self.plot:
-            #plotter.init_worker()
-            plotter.init_plot(self.env, self.policy)
 
     def shutdown_worker(self):
         self.sampler.shutdown_worker()
@@ -101,14 +99,24 @@ class BatchPolopt(RLAlgorithm):
         return self.sampler.process_samples(itr, paths)
 
     def train(self, sess=None):
+        '''
+        q = tf.FIFOQueue(capacity=32)
+        enqueue_op = q.enqueue_many(self.policy)
+        numberOfThreads = 1
+        qr = tf.train.QueueRunner(q, [enqueue_op] * numberOfThreads)
+        tf.train.add_queue_runner(qr)
+
+        input = q.dequeue()
+        input = tf.Print(input, data=[q.size(), input], message="Nb elements left, input:")
+        '''
+
+
         created_session = True if (sess is None) else False
         if sess is None:
             sess = tf.Session()
             sess.__enter__()
 
         sess.run(tf.global_variables_initializer())
-        for v in tf.global_variables():
-            print(v.name)
         self.start_worker()
         start_time = time.time()
         for itr in range(self.start_itr, self.n_itr):
@@ -131,9 +139,10 @@ class BatchPolopt(RLAlgorithm):
                 logger.record_tabular('Time', time.time() - start_time)
                 logger.record_tabular('ItrTime', time.time() - itr_start_time)
                 logger.dump_tabular(with_prefix=False)
+                for p in self.policy.get_param_values():
+                    print("print policy variables",p)
                 if self.plot:
-                    self.update_plot()
-                    #rollout(self.env, self.policy, animated=True, max_path_length=self.max_path_length)
+                    rollout(self.env, self.policy, animated=True, max_path_length=self.max_path_length)
                     if self.pause_for_plot:
                         input("Plotting evaluation run: Press Enter to "
                               "continue...")
@@ -163,7 +172,6 @@ class BatchPolopt(RLAlgorithm):
     def optimize_policy(self, itr, samples_data):
         raise NotImplementedError
 
-    def update_plot(self):
-        print("came here")
+    def update_plot():
         if self.plot:
-            plotter.update_plot(self.policy, self.max_path_length)
+            plotter.update(self.policy,max_length)

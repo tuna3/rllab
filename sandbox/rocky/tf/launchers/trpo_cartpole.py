@@ -7,9 +7,10 @@ from sandbox.rocky.tf.optimizers.conjugate_gradient_optimizer import FiniteDiffe
 from sandbox.rocky.tf.policies.gaussian_mlp_policy import GaussianMLPPolicy
 from sandbox.rocky.tf.envs.base import TfEnv
 from rllab.misc.instrument import stub, run_experiment_lite
+from sandbox.rocky.tf.plotter import plotter
 
 env = TfEnv(normalize(CartpoleEnv()))
-
+plotter.init_worker()
 policy = GaussianMLPPolicy(
     name="policy",
     env_spec=env.spec,
@@ -28,6 +29,7 @@ algo = TRPO(
     n_itr=40,
     discount=0.99,
     step_size=0.01,
+    plot = True,
     # optimizer=ConjugateGradientOptimizer(hvp_approach=FiniteDifferenceHvp(base_eps=1e-5))
 
 )
