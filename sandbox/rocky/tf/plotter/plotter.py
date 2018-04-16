@@ -31,7 +31,6 @@ class Plotter(Thread):
                 msgs = {}
                 # Only fetch the last message of each type
                 with self.sess.as_default():
-
                     while True:
                         try:
                             msg = queue.get_nowait()
