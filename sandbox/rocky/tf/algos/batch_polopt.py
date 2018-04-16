@@ -6,8 +6,9 @@ import tensorflow as tf
 from sandbox.rocky.tf.samplers.batch_sampler import BatchSampler
 from sandbox.rocky.tf.samplers.vectorized_sampler import VectorizedSampler
 from rllab.sampler.utils import rollout
-import sandbox.rocky.tf.plotter as plotter
-import pickle
+from sandbox.rocky.tf.plotter import plotter
+
+
 
 
 class BatchPolopt(RLAlgorithm):
@@ -88,8 +89,7 @@ class BatchPolopt(RLAlgorithm):
     def start_worker(self):
         self.sampler.start_worker()
         if self.plot:
-            #plotter.init_worker()
-            plotter.init_plot(self.env, self.policy)
+            plotter.init_plot(self.env,self.policy)
 
     def shutdown_worker(self):
         self.sampler.shutdown_worker()
@@ -107,8 +107,6 @@ class BatchPolopt(RLAlgorithm):
             sess.__enter__()
 
         sess.run(tf.global_variables_initializer())
-        for v in tf.global_variables():
-            print(v.name)
         self.start_worker()
         start_time = time.time()
         for itr in range(self.start_itr, self.n_itr):
@@ -133,7 +131,6 @@ class BatchPolopt(RLAlgorithm):
                 logger.dump_tabular(with_prefix=False)
                 if self.plot:
                     self.update_plot()
-                    #rollout(self.env, self.policy, animated=True, max_path_length=self.max_path_length)
                     if self.pause_for_plot:
                         input("Plotting evaluation run: Press Enter to "
                               "continue...")
@@ -164,6 +161,4 @@ class BatchPolopt(RLAlgorithm):
         raise NotImplementedError
 
     def update_plot(self):
-        print("came here")
-        if self.plot:
-            plotter.update_plot(self.policy, self.max_path_length)
+        plotter.update_plot(self.policy,self.max_path_length)
