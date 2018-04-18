@@ -7,11 +7,7 @@ import tensorflow as tf
 
 from rllab.sampler.utils import rollout
 
-
-
-
-
-__all__ = ['init_plot', 'update_plot']
+#__all__ = ['init_plot', 'update_plot']
 
 thread = None
 queue = None
