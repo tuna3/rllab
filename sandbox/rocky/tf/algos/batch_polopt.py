@@ -9,8 +9,6 @@ from rllab.sampler.utils import rollout
 from sandbox.rocky.tf.plotter import plotter
 
 
-
-
 class BatchPolopt(RLAlgorithm):
     """
     Base class for batch sampling-based policy optimization methods.
@@ -80,7 +78,10 @@ class BatchPolopt(RLAlgorithm):
         self.whole_paths = whole_paths
         self.fixed_horizon = fixed_horizon
         if sampler_cls is None:
-            sampler_cls = BatchSampler
+            if self.policy.vectorized and not force_batch_sampler:
+                sampler_cls = VectorizedSampler
+            else:
+                sampler_cls = BatchSampler
         if sampler_args is None:
             sampler_args = dict()
         self.sampler = sampler_cls(self, **sampler_args)
@@ -93,6 +94,8 @@ class BatchPolopt(RLAlgorithm):
 
     def shutdown_worker(self):
         self.sampler.shutdown_worker()
+        if self.plot:
+            plotter._shutdown_worker()
 
     def obtain_samples(self, itr):
         return self.sampler.obtain_samples(itr)
@@ -131,6 +134,7 @@ class BatchPolopt(RLAlgorithm):
                 logger.dump_tabular(with_prefix=False)
                 if self.plot:
                     self.update_plot()
+                    #rollout(self.env, self.policy, animated=True, max_path_length=self.max_path_length)
                     if self.pause_for_plot:
                         input("Plotting evaluation run: Press Enter to "
                               "continue...")
