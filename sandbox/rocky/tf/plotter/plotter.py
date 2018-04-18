@@ -62,7 +62,7 @@ def _init_worker(sess=None):
         sess = tf.get_default_session()
         thread = Plotter(sess)
         thread.start()
-        atexit.register(_shutdown_worker)
+        #atexit.register(_shutdown_worker)
 
 
 def init_plot(env, policy,sess=None):
